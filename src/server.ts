@@ -19,10 +19,10 @@ app.use(express.json());
 
 app.use('/api/v1/user', router());
 //static files
-app.use(express.static(path.join(__dirname, "./client/dist")));
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.get("*", function (req: Request, res: Response) {
-    res.sendFile(path.join(__dirname, "./client/dist/index.html"));
+    res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
 
 const PORT = process.env.PORT || 8080
